@@ -1,0 +1,444 @@
+:root {
+    --priority-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --borders-color: #ECECEC;
+    --hero-footer-background: #2F303A;
+    --page-background: #FFFFFF;
+    --logo-header: #000000;
+    --logo-footer: #FFFFFF;
+    --hero: #FFFFFF;
+    --team-background: #F5F4FA;
+    --address-color: rgba(255, 255, 255, 0.6);
+    --team-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    --portfolio-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    --project-border: #EEEEEE;
+    --hero-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    --hero-button-active: #188CE8;
+
+}
+
+/* Подключается через modern-normalize.min.css */
+/* html {
+    box-sizing: border-box;
+}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+} */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    background-color: var(--page-background);
+    color: var(--priority-text-color);
+}
+
+/* Утилиты */
+/* Сброс верхних отступов в заголовках, тексте и списках */
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    border-bottom: 1px solid var(--borders-color);
+
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Для расположения меню по центру */
+.flex-container,
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* Для ссылок падинги */
+.link,
+.nav-contacts {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+/* Отступ от логотипа */
+.site-nav {
+    margin-left: 93px;
+}
+
+
+/* Ссылка-Логотип  */
+.logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.22;
+    color: var(--accent-color);
+    display: inline-block;
+
+}
+
+/* Текст Studio */
+.logo-header {
+    color: var(--logo-header);
+}
+
+.logo-footer {
+    color: var(--logo-footer);
+}
+
+/* Сброс точек списка */
+.list,
+.buttons.list,
+.projects.list {
+    list-style: none;
+}
+
+/* Меню навигации */
+.link,
+.nav-contacts {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+}
+
+/* Отступы в новигации */
+/* .site-nav .item:not(:last-child) {
+margin-right: 50px;
+} */
+.site-nav >.item+.item,
+.flex >.item+.item {
+    margin-left: 50px;
+}
+
+/* Ссылки в навигации */
+.logo,
+.accent {
+    text-decoration: none;
+}
+
+/* Цвет наведения на ссылку*/
+.active,
+.accent:hover,
+.accent:focus {
+    color: var(--accent-color);
+}
+
+.nav-contacts {
+    color: var(--priority-text-color);
+}
+
+/* Выравнивание у левому краю */
+.contacts {
+    margin-left: auto;
+}
+
+/* Секция Герой */
+.hero {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: var(--hero-img-overlay);
+    background-image: url(../images/icons/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-title {
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--hero);
+
+}
+
+/* Кнопка */
+.hero-button {
+    min-width: 216px;
+    display: inline-block;
+    padding: 10px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--logo-footer);
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    border: 0;
+    box-shadow: var(--hero-box-shadow);
+    cursor: pointer;
+}
+
+.hero-button:active {
+    background: var(--hero-button-active);
+}
+
+/* Секции */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* Заголовки секций h2 */
+.section-title {
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--title-text-color);
+    margin-bottom: 50px;
+}
+
+/* Скрытие заголовка */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+/* Особливості  сброс нижнего паддинга*/
+.no-padding {
+    padding-bottom: 0;
+}
+
+.no-center {
+    align-items: normal;
+}
+
+/* Иконки секции Особливості */
+
+.peculiarities-item::before {
+    content: "";
+    display: block;
+    height: 120px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: var(--team-background);
+} 
+
+.icon-antena::before {
+    background-image: url(../images/icons/antenna.svg) ;
+}
+.icon-clock::before {
+    background-image: url(../images/icons/clock.svg) ;
+}
+.icon-diagram::before {
+    background-image: url(../images/icons/diagram.svg) ;
+}
+.icon-astronaut::before {
+    background-image: url(../images/icons/astronaut.svg) ;
+}
+
+/* Заголовки h3 Секции "Особенности"*/
+.peculiarities-subtitle {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+
+/* текст Секции "Особенности" */
+.peculiarities-text {
+    width: 270px;
+    line-height: 1.7;
+}
+
+
+/* Секция Чим ми займаемося */
+/* Снятие пробела у фото */
+.img-block {
+    display: block;
+}
+.alignment,
+.team-list {
+    justify-content: space-between;
+}
+/* Секция Наша команда */
+.team {
+    background-color: var(--team-background);
+}
+
+.team-card {
+    width: 270px;
+    /* height: 368px; */
+    background: var(--page-background);
+    box-shadow: var(--team-box-shadow);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.caption {
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+.team-subtitle {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.team-text {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+/* Объединение для выравнивания */
+.content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+/* Футер */
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: var(--hero-footer-background);
+}
+.address {
+    margin-top: 20px;
+}
+
+.address-indent {
+    margin-top: 9px;
+}
+.address-link,
+.footer-contacts {
+    font-style: normal;
+    line-height: 1.7;
+    color: var(--logo-footer);
+    text-decoration: none;
+}
+
+.footer-contacts {
+    color: var(--address-color);
+}
+
+/* Страница Портфолио */
+/* Кнопки */
+.btn-flex{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.portfolio-button {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 22px;
+    
+    color: var(--title-text-color);
+    background: var(--team-background);
+
+    /* font-family: inherit; */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    cursor: pointer;
+    }
+
+.buttons .item:not(:first-child) {
+    margin-left: 8px;
+
+}
+/* Активная кнопка */
+.portfolio-button.active,
+.portfolio-button:hover,
+portfolio-button:focus {
+    padding: 6px 25px;
+    color: var(--logo-footer);
+    background: var(--accent-color);
+    box-shadow: var(--portfolio-box-shadow);
+}
+
+/* flex-container */
+.flex-container {
+    flex-wrap: wrap;
+    /* margin: -15px; */
+   
+}
+
+.project-caption {
+    padding: 20px 24px;
+    border-right: 1px solid var(--project-border);
+    border-left: 1px solid var(--project-border);
+    border-bottom: 1px solid var(--project-border);
+
+   
+    
+}
+/* Заголовки h2 Проектов */
+.projects-title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--title-text-color);
+    margin-bottom: 4px;
+}
+
+.projects-text {
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+.project {
+    /* /* width: 370px; */
+    width: calc((100% - 60px)/3);
+    /* margin: 15px; */
+     margin-right: 30px; 
+    margin-bottom: 30px; 
+    background: var(--page-background);
+    /* border: 1px solid var(--project-border); */
+}
+
+/* Каждый третий */ 
+.project:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* Последние 3 элемента */
+.project:nth-last-child(-n+3) {
+    margin-bottom: 0;
+} 
+
