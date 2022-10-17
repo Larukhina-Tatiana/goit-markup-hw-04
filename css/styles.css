@@ -305,8 +305,8 @@ margin-right: 50px;
 }
 
 .caption {
-    margin-top: 30px;
-    margin-bottom: 16px;
+    padding-top: 30px;
+    padding-bottom: 16px;
 }
 .team-subtitle {
     margin-bottom: 10px;
@@ -386,12 +386,19 @@ margin-right: 50px;
 .portfolio-button.active,
 .portfolio-button:hover,
 portfolio-button:focus {
-    padding: 6px 25px;
+    /* padding: 6px 25px; */
     color: var(--logo-footer);
     background: var(--accent-color);
     box-shadow: var(--portfolio-box-shadow);
 }
 
+/* .portfolio-button.active {
+
+    padding: 6px 25px;
+    color: var(--logo-footer);
+    background: var(--accent-color);
+    box-shadow: var(--portfolio-box-shadow);
+} */
 /* flex-container */
 .flex-container {
     flex-wrap: wrap;
