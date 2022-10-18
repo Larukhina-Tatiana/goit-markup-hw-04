@@ -19,6 +19,7 @@
     --project-border: #EEEEEE;
     --hero-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     --hero-button-active: #188CE8;
+    --clients: #AFB1B8;
 
 }
 
@@ -146,9 +147,23 @@ margin-right: 50px;
     color: var(--priority-text-color);
 }
 
+.nav-contacks-icon {
+    fill: var(--priority-text-color)
+}
+
+.nav-contacks-icon:hover,
+.nav-contacks-icon:focus {
+    fill: var(--accent-color);
+}
 /* Выравнивание у левому краю */
 .contacts {
     margin-left: auto;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Секция Герой */
@@ -239,9 +254,22 @@ margin-right: 50px;
     align-items: normal;
 }
 
-/* Иконки секции Особливості */
+/* Иконки секции Особливості через SVG*/
 
-.peculiarities-item::before {
+.peculiarities-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: var(--team-background);
+
+}
+
+/* Иконки секции Особливості через ::before */
+/* Дать ли peculiarities-item icon-clock */
+/* .peculiarities-item::before {
     content: "";
     display: block;
     height: 120px;
@@ -264,7 +292,7 @@ margin-right: 50px;
 }
 .icon-astronaut::before {
     background-image: url(../images/icons/astronaut.svg) ;
-}
+} */
 
 /* Заголовки h3 Секции "Особенности"*/
 .peculiarities-subtitle {
@@ -288,7 +316,8 @@ margin-right: 50px;
     display: block;
 }
 .alignment,
-.team-list {
+.team-list,
+.clients-list {
     justify-content: space-between;
 }
 /* Секция Наша команда */
@@ -327,8 +356,40 @@ margin-right: 50px;
 .content {
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
+
+    /* Секция Постійні клієнти */
+    
+    /* li */
+.clients-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--clients);
+    border-radius: 4px;
+}   
+
+.clients-card:hover,
+.clients-card:focus {
+    border: 1px solid var(--accent-color);
+}
+
+
+/* svg */
+.card-accent-icon,
+.card-accent-icon {
+    fill: var(--clients);
+}
+
+
+.card-accent-icon:hover,
+.card-accent-icon:focus {
+    fill: var(--accent-color) 
+}  
+
+
 /* Футер */
 .footer {
     padding-top: 60px;
@@ -449,3 +510,19 @@ portfolio-button:focus {
     margin-bottom: 0;
 } 
 
+.team-card-social-link {
+    justify-content: center;
+}
+
+
+
+
+.team-link {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--page-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
