@@ -333,10 +333,10 @@ margin-right: 50px;
   border-radius: 0px 0px 4px 4px;
 }
 
-.caption {
+/* .caption {
   padding-top: 30px;
   padding-bottom: 30px;
-}
+} */
 .team-subtitle {
   margin-bottom: 10px;
   font-weight: 500;
@@ -469,6 +469,7 @@ margin-right: 50px;
   color: var(--hero);
 
   margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 .svg-social-link {
@@ -546,6 +547,7 @@ portfolio-button:focus {
 .projects-text {
   font-size: 16px;
   line-height: 1.87;
+  padding-top: 10px;
 }
 
 .project {
@@ -577,4 +579,14 @@ portfolio-button:focus {
 .team-card-social-list,
 .footer-social-list {
   justify-content: center;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: left;
+  gap: 70px;
+}
+
+.footer-social-list  {
+  gap: 10px;
 }
