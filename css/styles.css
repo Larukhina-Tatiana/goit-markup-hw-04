@@ -165,7 +165,6 @@ margin-right: 50px;
 /* Секция Герой */
 .hero {
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -248,7 +247,7 @@ margin-right: 50px;
 }
 
 /* Особливості  сброс нижнего паддинга*/
-.no-padding {
+.no-padding-bottom {
   padding-bottom: 0;
 }
 
@@ -355,6 +354,7 @@ margin-right: 50px;
 
 .team-card-social-link {
   justify-content: center;
+  gap: 10px;
 }
 /* Объединение для выравнивания */
 .content {
