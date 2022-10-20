@@ -590,3 +590,6 @@ portfolio-button:focus {
 .footer-social-list  {
   gap: 10px;
 }
+.no-padding {
+  padding: 0;
+}
